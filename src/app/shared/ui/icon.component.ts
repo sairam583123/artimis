@@ -15,9 +15,9 @@ import { CommonModule } from '@angular/common';
           <circle cx="4" cy="9" r="1.4"/>
         </ng-container>
         <ng-container *ngSwitchCase="'toilet'">
-          <path d="M7 4h8v5H7z"/>
-          <path d="M6 9h12l-1.2 4.5A5 5 0 0 1 12 17a5 5 0 0 1-4.8-3.5L6 9z"/>
-          <path d="M8.5 17c-1 1.2-1.5 2.4-1.5 3.4V21h10v-.6c0-1-.5-2.2-1.5-3.4"/>
+          <rect x="2" y="9" width="7" height="6" rx="1"/>
+          <rect x="15" y="9" width="7" height="6" rx="1"/>
+          <rect x="8" y="7" width="8" height="10" rx="1.5"/>
         </ng-container>
         <ng-container *ngSwitchCase="'shower'">
           <path d="M6 8a6 6 0 0 1 12 0"/>
@@ -35,6 +35,11 @@ import { CommonModule } from '@angular/common';
           <path d="M15 12h6"/>
           <rect x="2" y="6" width="4" height="4" rx="0.5"/>
           <rect x="16" y="14" width="4" height="4" rx="0.5"/>
+        </ng-container>
+        <ng-container *ngSwitchCase="'grid'">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M7 3v18M11 3v18M15 3v18"/>
+          <circle cx="12" cy="12" r="1"/>
         </ng-container>
         <ng-container *ngSwitchCase="'valve'">
           <circle cx="12" cy="12" r="4.5"/>
@@ -89,6 +94,35 @@ import { CommonModule } from '@angular/common';
         <ng-container *ngSwitchCase="'quote'">
           <path d="M7 7h4v5a4 4 0 0 1-4 4v-2a2 2 0 0 0 2-2H7z"/>
           <path d="M15 7h4v5a4 4 0 0 1-4 4v-2a2 2 0 0 0 2-2h-2z"/>
+        </ng-container>
+        <ng-container *ngSwitchCase="'durable'">
+          <rect x="2" y="9" width="3" height="6" rx="1"/>
+          <rect x="19" y="9" width="3" height="6" rx="1"/>
+          <rect x="6" y="10" width="2" height="4" rx="0.5"/>
+          <rect x="16" y="10" width="2" height="4" rx="0.5"/>
+          <path d="M8 12h8"/>
+        </ng-container>
+        <ng-container *ngSwitchCase="'long-life'">
+          <path d="M7 4h10M7 20h10"/>
+          <path d="M7 4c0 4 5 6 5 8s-5 4-5 8"/>
+          <path d="M17 4c0 4-5 6-5 8s5 4 5 8"/>
+        </ng-container>
+        <ng-container *ngSwitchCase="'leak-free'">
+          <path d="M4 8h8a3 3 0 0 1 3 3"/>
+          <circle cx="4" cy="8" r="1.4"/>
+          <path d="M13 13.5c0 1.5-1 2.7-1 2.7s-1-1.2-1-2.7a1 1 0 0 1 2 0z"/>
+        </ng-container>
+        <ng-container *ngSwitchCase="'drip-free'">
+          <path d="M12 4s5 5.5 5 9a5 5 0 0 1-10 0c0-3.5 5-9 5-9z"/>
+          <path d="M5 5l14 14"/>
+        </ng-container>
+        <ng-container *ngSwitchCase="'polymer'">
+          <circle cx="12" cy="12" r="2"/>
+          <circle cx="5" cy="6" r="1.5"/>
+          <circle cx="19" cy="6" r="1.5"/>
+          <circle cx="5" cy="18" r="1.5"/>
+          <circle cx="19" cy="18" r="1.5"/>
+          <path d="M12 12L5 6M12 12L19 6M12 12L5 18M12 12L19 18"/>
         </ng-container>
       </ng-container>
     </svg>

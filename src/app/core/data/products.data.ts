@@ -35,23 +35,55 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     ],
   },
   {
-    slug: 'sanitaryware',
-    name: 'Sanitaryware',
-    shortName: 'Sanitaryware',
-    tagline: 'Rimless WCs, wash basins & anti-germ glazing',
-    description:
-      'Vitreous china sanitaryware finished with anti-germ glaze that keeps surfaces hygienic and easy to clean. Our rimless flush technology and tornado-flush WCs deliver powerful, quiet flushing while using less water.',
-    icon: 'toilet',
-    color: 'from-brass-500 to-brass-700',
-    items: [
-      { name: 'Rimless Wall-Hung WC', description: 'Tornado flush technology with concealed cistern compatibility.', tags: ['Anti-Germ', 'Rimless'] },
-      { name: 'One-Piece Floor Mounted WC', description: 'S-trap outlet with soft-close UF seat cover included.', tags: ['Anti-Germ', 'S-Trap'] },
-      { name: 'Table Top Wash Basin', description: 'Designer oval basin for modern vanity counters.', tags: ['Vitreous China'] },
-      { name: 'Wall Hung Wash Basin', description: 'Space-saving basin with concealed bracket fitting.', tags: ['Compact'] },
-      { name: 'Squatting Pan (Orissa)', description: 'Anti-skid textured surface with integrated foot rests.', tags: ['Anti-Skid'] },
-      { name: 'Soft Close Seat Cover', description: 'UF-grade cover with slow-drop hinge mechanism.', tags: ['UF', 'Soft-Close'] },
-    ],
-  },
+slug: 'Connection Pipes',
+
+name: 'Connection Pipes',
+
+shortName: 'Connection Pipes',
+
+tagline: 'Durable, flexible & leak-resistant water connections',
+
+description:
+'High-quality connection pipes designed for secure, flexible, and leak-resistant water flow. Built with durable materials for long-lasting performance, easy installation, and reliable connections in bathrooms and kitchens.',
+
+icon: 'pipe',
+
+color: 'from-brass-500 to-brass-700',
+
+items: [
+{
+name: 'Braided Connection Pipe',
+description: 'Flexible braided pipe designed for secure and long-lasting water connections.',
+tags: ['Durable', 'Flexible']
+},
+{
+name: 'PVC Connection Pipe',
+description: 'Lightweight and reliable pipe for smooth water flow and easy installation.',
+tags: ['Flexible', 'Easy Install']
+},
+{
+name: 'Stainless Steel Connection Pipe',
+description: 'Strong and corrosion-resistant pipe for dependable water supply connections.',
+tags: ['Corrosion-Resistant', 'Durable']
+},
+{
+name: 'Sink Connection Pipe',
+description: 'Flexible water supply connection designed for kitchen sinks and wash basins.',
+tags: ['Kitchen', 'Bathroom']
+},
+{
+name: 'Angle Valve Connection Pipe',
+description: 'Reliable flexible connection for angle valves and sanitary fittings.',
+tags: ['Secure Fit', 'Leak-Resistant']
+},
+{
+name: 'Heavy Duty Connection Pipe',
+description: 'Premium quality pipe built for enhanced durability and high-pressure performance.',
+tags: ['Heavy Duty', 'High Pressure']
+},
+],
+},
+
   {
     slug: 'showers',
     name: 'Showers & Overhead Systems',
@@ -87,21 +119,53 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     ],
   },
   {
-    slug: 'pipes-fittings',
-    name: 'Pipes & Fittings',
-    shortName: 'Pipes',
-    tagline: 'CPVC, PVC & waste pipe solutions',
-    description:
-      'A complete range of supply and waste pipes, elbows, tees, and reducers engineered to IS standards, ensuring leak-proof joints and long-term durability under pressure.',
-    icon: 'pipe',
-    color: 'from-brand-700 to-brand-900',
-    items: [
-      { name: 'CPVC Supply Pipe', description: 'Hot & cold water supply pipe, IS 15778 compliant.', tags: ['CPVC'] },
-      { name: 'PVC Waste Pipe', description: 'Soil and waste discharge pipe with solvent-weld joints.', tags: ['PVC'] },
-      { name: 'Flexible Connection Hose', description: 'Braided stainless steel hose for tap connections.', tags: ['SS Braided'] },
-      { name: 'Bib Cock Elbow', description: 'Brass elbow fitting for concealed plumbing lines.', tags: ['Brass'] },
-    ],
-  },
+slug: 'gratings',
+
+name: 'Gratings',
+
+shortName: 'Gratings',
+
+tagline: 'Stylish, durable & efficient drainage solutions',
+
+description:
+'A premium range of bathroom and floor gratings designed for efficient water drainage, long-lasting durability, and a refined modern look. Engineered to prevent clogging while adding a clean and elegant finish to your space.',
+
+icon: 'grid',
+
+color: 'from-brand-700 to-brand-900',
+
+items: [
+
+
+{
+  name: 'Square Floor Grating',
+  description: 'Compact and durable grating designed for efficient water drainage in bathrooms.',
+  tags: ['Durable', 'Efficient Drainage']
+},
+
+{
+  name: 'Round Floor Grating',
+  description: 'Classic round design with reliable drainage performance and easy maintenance.',
+  tags: ['Easy Clean', 'Durable']
+},
+
+{
+  name: 'Linear Shower Grating',
+  description: 'Modern linear design for smooth water flow and a sleek bathroom finish.',
+  tags: ['Modern', 'Fast Drainage']
+},
+
+{
+  name: 'SS Floor Grating',
+  description: 'Corrosion-resistant stainless steel grating built for long-lasting performance.',
+  tags: ['Stainless Steel', 'Corrosion Resistant']
+},
+
+
+],
+
+},
+
   {
     slug: 'valves',
     name: 'Valves & Control Fittings',

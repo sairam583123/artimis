@@ -15,17 +15,19 @@ export class HomeComponent {
   categories = PRODUCT_CATEGORIES;
 
   stats = [
-    { value: '20+', label: 'Years of Craftsmanship' },
-    { value: '500+', label: 'Product Variants' },
-    { value: '1200+', label: 'Dealers Nationwide' },
-    { value: '10L+', label: 'Happy Households' },
+    { value: '10+', label: 'Years of Craftsmanship' },
+    { value: '100+', label: 'Product Variants' },
+    { value: '250+', label: 'Dealers Nationwide' },
+    { value: '50k+', label: 'Happy Households' },
   ];
 
   whyUs = [
-    { icon: 'droplet', title: 'Solid Brass Build', text: 'Every tap is machined from high-grade brass for corrosion resistance and lasting shine.' },
-    { icon: 'shield', title: 'Anti-Germ Glazing', text: 'Sanitaryware finished with anti-germ glaze keeps surfaces hygienic between cleans.' },
-    { icon: 'check', title: 'Leak-Free Testing', text: 'Every batch undergoes pressure and cycle testing before it leaves our facility.' },
-    { icon: 'truck', title: 'Pan-India Delivery', text: 'A dealer and distributor network that reaches builders and homeowners nationwide.' },
+    { icon: 'durable', title: 'Durable', text: 'Reinforced engineering polymer body built to withstand daily wear without cracking or fading.' },
+    { icon: 'long-life', title: 'Long Life', text: 'Engineered to outlast years of everyday use without losing finish or function.' },
+    { icon: 'leak-free', title: 'Leak Free', text: 'Precision-fitted internals keep every connection sealed tight, batch after batch.' },
+    { icon: 'drip-free', title: 'Drip Free', text: 'Ceramic disc technology shuts off cleanly, leaving no drips behind.' },
+    { icon: 'droplet', title: 'Corrosion Free', text: 'Unaffected by hard water or rust, keeping fittings looking new for longer.' },
+    { icon: 'polymer', title: 'Made of Engineering Polymer', text: 'Advanced polymer construction delivers metal-like strength at a fraction of the weight.' },
   ];
 
   testimonials = [

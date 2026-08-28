@@ -1,8 +1,7 @@
 <!-- ===== MOBILE TOP BAR ===== -->
 <header class="fixed inset-x-0 top-0 z-40 flex h-16 items-center justify-between bg-brand-900 px-4 shadow-lg lg:hidden">
   <a routerLink="/" (click)="close()" class="flex items-center gap-2">
-    <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-brass-500 font-display text-lg font-extrabold text-white">P</span>
-    <span class="font-display text-lg font-bold text-white">Arti<span class="text-brass-400">mis</span></span>
+    <img src="logo.jpg" alt="Artimis logo" class="h-11 w-auto object-contain">
   </a>
   <button
     (click)="toggle()"
@@ -27,9 +26,10 @@
   [class.translate-x-0]="isOpen()"
 >
   <!-- Logo -->
-  <div class="flex h-16 items-center gap-2 px-6 lg:h-20">
-    <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-brass-500 font-display text-lg font-extrabold text-white">P</span>
-    <span class="font-display text-lg font-bold text-white">Arti<span class="text-brass-400">mis</span></span>
+  <div class="flex items-center justify-center px-6 py-5">
+    <div class="rounded-xl bg-white p-2.5 shadow-md">
+      <img src="logo.jpg" alt="Artimis logo" class="h-11 w-auto object-contain">
+    </div>
   </div>
 
   <!-- Nav -->
