@@ -1,0 +1,53 @@
+<!-- ===== HEADER ===== -->
+<section class="bg-gradient-to-br from-brand-950 via-brand-800 to-brand-600 py-16">
+  <div class="mx-auto max-w-7xl px-6 text-center">
+    <span class="section-eyebrow bg-white/10 text-brass-300">Gallery</span>
+    <h1 class="font-display text-4xl font-extrabold text-white sm:text-5xl">A closer look at our craftsmanship</h1>
+    <p class="mx-auto mt-4 max-w-2xl text-white/80">
+      Browse a visual snapshot of our product range across categories. Filter to jump straight to what you need.
+    </p>
+  </div>
+</section>
+
+<!-- ===== FILTERS ===== -->
+<section class="sticky top-16 z-20 border-b border-slate-100 bg-white/90 py-4 backdrop-blur lg:top-0">
+  <div class="mx-auto flex max-w-7xl flex-wrap gap-2 px-6">
+    <button
+      *ngFor="let f of filters"
+      (click)="setFilter(f)"
+      class="rounded-full px-4 py-2 text-sm font-semibold transition"
+      [class.bg-brand-800]="active() === f"
+      [class.text-white]="active() === f"
+      [class.bg-slate-100]="active() !== f"
+      [class.text-slate-600]="active() !== f"
+    >
+      {{ f }}
+    </button>
+  </div>
+</section>
+
+<!-- ===== GRID ===== -->
+<section class="mx-auto max-w-7xl px-6 py-16">
+  <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+    <div *ngFor="let tile of filtered()" class="group relative overflow-hidden rounded-2xl">
+      <app-visual-tile [icon]="tile.icon" [colorClass]="tile.color" ratio="1/1" [iconSize]="42"></app-visual-tile>
+      <div class="absolute inset-0 flex flex-col items-start justify-end bg-gradient-to-t from-black/70 via-black/0 to-transparent p-3 opacity-0 transition group-hover:opacity-100">
+        <p class="text-xs font-semibold text-white">{{ tile.title }}</p>
+        <p class="text-[10px] text-white/70">{{ tile.category }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="filtered().length === 0" class="py-20 text-center text-slate-400">
+    No images found for this filter.
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="bg-brand-950 py-16">
+  <div class="mx-auto max-w-3xl px-6 text-center">
+    <h2 class="font-display text-3xl font-bold text-white">Want the full catalog with pricing?</h2>
+    <p class="mt-4 text-white/70">Request our complete PDF catalog with specifications and dealer pricing.</p>
+    <a routerLink="/contact" class="btn-primary mt-8 inline-flex">Request Catalog</a>
+  </div>
+</section>

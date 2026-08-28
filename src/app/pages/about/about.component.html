@@ -1,0 +1,84 @@
+<!-- ===== PAGE HEADER ===== -->
+<section class="bg-gradient-to-br from-brand-950 via-brand-800 to-brand-600 py-16">
+  <div class="mx-auto max-w-7xl px-6 text-center">
+    <span class="section-eyebrow bg-white/10 text-brass-300">About Us</span>
+    <h1 class="font-display text-4xl font-extrabold text-white sm:text-5xl">Crafting trust, one fitting at a time</h1>
+    <p class="mx-auto mt-4 max-w-2xl text-white/80">
+      For over two decades we've manufactured taps, sanitaryware and bathroom fittings that builders, plumbers and homeowners rely on every day.
+    </p>
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 lg:grid-cols-2">
+  <div>
+    <span class="section-eyebrow">Our Story</span>
+    <h2 class="section-title">From a small workshop to a nationwide brand</h2>
+    <p class="mt-5 text-slate-500">
+      What began as a modest brass-casting workshop has grown into a full-scale manufacturing operation producing taps, sanitaryware, showers, valves and accessories. Along the way, our focus has never wavered: build fittings that perform reliably long after installation.
+    </p>
+    <p class="mt-4 text-slate-500">
+      Today our products reach homes, hotels and commercial sites through a growing network of dealers and distributors, backed by an in-house quality lab that pressure-tests every batch before it ships.
+    </p>
+    <div class="mt-8 grid grid-cols-2 gap-4">
+      <div class="rounded-xl bg-brand-50 p-4">
+        <p class="font-display text-2xl font-extrabold text-brand-800">20+</p>
+        <p class="text-xs text-slate-500">Years in manufacturing</p>
+      </div>
+      <div class="rounded-xl bg-brass-50 p-4">
+        <p class="font-display text-2xl font-extrabold text-brass-700">500+</p>
+        <p class="text-xs text-slate-500">Product variants</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <app-visual-tile icon="award" colorClass="from-brand-600 to-brand-900" ratio="1/1" [iconSize]="52" class="translate-y-4"></app-visual-tile>
+    <app-visual-tile icon="shield" colorClass="from-brass-500 to-brass-700" ratio="1/1" [iconSize]="52"></app-visual-tile>
+    <app-visual-tile icon="truck" colorClass="from-brass-600 to-brand-800" ratio="1/1" [iconSize]="52"></app-visual-tile>
+    <app-visual-tile icon="droplet" colorClass="from-brand-500 to-brand-700" ratio="1/1" [iconSize]="52" class="translate-y-4"></app-visual-tile>
+  </div>
+</section>
+
+<!-- ===== VALUES ===== -->
+<section class="bg-white py-20">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="section-eyebrow">What Drives Us</span>
+      <h2 class="section-title">Our core values</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div *ngFor="let v of values" class="card text-center">
+        <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
+          <app-icon [name]="v.icon" klass="h-7 w-7"></app-icon>
+        </div>
+        <h3 class="font-display text-lg font-bold text-brand-900">{{ v.title }}</h3>
+        <p class="mt-2 text-sm text-slate-500">{{ v.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section class="mx-auto max-w-4xl px-6 py-20">
+  <div class="mx-auto max-w-2xl text-center">
+    <span class="section-eyebrow">Milestones</span>
+    <h2 class="section-title">Our journey so far</h2>
+  </div>
+
+  <div class="mt-14 space-y-8 border-l-2 border-brand-100 pl-8">
+    <div *ngFor="let t of timeline" class="relative">
+      <span class="absolute -left-[41px] flex h-6 w-6 items-center justify-center rounded-full bg-brass-500 text-[10px] font-bold text-white ring-4 ring-white">&#9679;</span>
+      <p class="font-display text-lg font-bold text-brand-900">{{ t.year }}</p>
+      <p class="mt-1 text-sm text-slate-500">{{ t.text }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="bg-brand-950 py-16">
+  <div class="mx-auto max-w-3xl px-6 text-center">
+    <h2 class="font-display text-3xl font-bold text-white">Want to partner with us as a dealer?</h2>
+    <p class="mt-4 text-white/70">We're always looking to grow our distribution network. Get in touch to learn about margins, training and support.</p>
+    <a routerLink="/contact" class="btn-primary mt-8 inline-flex">Become a Dealer</a>
+  </div>
+</section>

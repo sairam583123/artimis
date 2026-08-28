@@ -1,0 +1,130 @@
+<!-- ===== HERO ===== -->
+<section class="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-800 to-brand-600">
+  <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 15% 25%, white 0, transparent 30%), radial-gradient(circle at 85% 75%, white 0, transparent 25%);"></div>
+  <div class="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 py-20 lg:grid-cols-2 lg:py-28">
+    <div>
+      <span class="section-eyebrow bg-white/10 text-brass-300">Brass Taps &bull; Sanitaryware &bull; Bath Fittings</span>
+      <h1 class="font-display text-4xl font-extrabold leading-tight text-white sm:text-5xl">
+        Water fittings built for
+        <span class="text-brass-400">a lifetime of flow.</span>
+      </h1>
+      <p class="mt-5 max-w-lg text-lg text-white/80">
+        From solid-brass faucets to anti-germ sanitaryware, we craft bathroom and kitchen fittings that combine durability with a polished, modern finish.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a routerLink="/products" class="btn-primary">
+          Explore Products
+          <app-icon name="arrow-right" klass="h-4 w-4"></app-icon>
+        </a>
+        <a routerLink="/contact" class="btn-outline">Get a Quote</a>
+      </div>
+
+      <div class="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
+        <div *ngFor="let s of stats">
+          <p class="font-display text-2xl font-extrabold text-white">{{ s.value }}</p>
+          <p class="text-xs text-white/60">{{ s.label }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative hidden lg:block">
+      <div class="grid grid-cols-2 gap-4">
+        <app-visual-tile icon="faucet" colorClass="from-brass-400 to-brass-600" ratio="1/1" [iconSize]="60" class="translate-y-6"></app-visual-tile>
+        <app-visual-tile icon="toilet" colorClass="from-brand-500 to-brand-700" ratio="1/1" [iconSize]="60"></app-visual-tile>
+        <app-visual-tile icon="shower" colorClass="from-brand-600 to-brand-900" ratio="1/1" [iconSize]="60"></app-visual-tile>
+        <app-visual-tile icon="accessory" colorClass="from-brass-500 to-brass-700" ratio="1/1" [iconSize]="60" class="translate-y-6"></app-visual-tile>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="mx-auto max-w-7xl px-6 py-20">
+  <div class="mx-auto max-w-2xl text-center">
+    <span class="section-eyebrow">Why Choose Us</span>
+    <h2 class="section-title">Engineered for performance, finished for beauty</h2>
+    <p class="mt-4 text-slate-500">Every product that leaves our facility is built to a simple promise &mdash; it should work flawlessly for years and look just as good on day one thousand as it did on day one.</p>
+  </div>
+
+  <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div *ngFor="let item of whyUs" class="card text-center">
+      <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
+        <app-icon [name]="item.icon" klass="h-7 w-7"></app-icon>
+      </div>
+      <h3 class="font-display text-lg font-bold text-brand-900">{{ item.title }}</h3>
+      <p class="mt-2 text-sm text-slate-500">{{ item.text }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCT CATEGORIES ===== -->
+<section class="bg-white py-20">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="section-eyebrow">Our Range</span>
+      <h2 class="section-title">Everything for the modern bathroom</h2>
+      <p class="mt-4 text-slate-500">A complete catalog spanning taps, sanitaryware, showers, accessories, pipes and valves &mdash; all designed to work together.</p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <a
+        *ngFor="let cat of categories"
+        [routerLink]="['/products', cat.slug]"
+        class="card group flex flex-col"
+      >
+        <app-visual-tile [icon]="cat.icon" [colorClass]="cat.color" ratio="16/10" [iconSize]="48"></app-visual-tile>
+        <h3 class="mt-5 font-display text-lg font-bold text-brand-900">{{ cat.name }}</h3>
+        <p class="mt-1 text-sm text-slate-500">{{ cat.tagline }}</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brass-600 transition group-hover:gap-2">
+          View Range <app-icon name="chevron-right" klass="h-4 w-4"></app-icon>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BANNER STRIP ===== -->
+<section class="bg-gradient-to-r from-brass-500 to-brass-600 py-10">
+  <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 sm:flex-row">
+    <p class="text-center font-display text-lg font-bold text-white sm:text-left">
+      Building or renovating? Get product recommendations tailored to your project.
+    </p>
+    <a routerLink="/contact" class="btn-outline whitespace-nowrap !border-white">Talk to Our Team</a>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="mx-auto max-w-7xl px-6 py-20">
+  <div class="mx-auto max-w-2xl text-center">
+    <span class="section-eyebrow">Testimonials</span>
+    <h2 class="section-title">Trusted on-site and in showrooms</h2>
+  </div>
+
+  <div class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+    <div *ngFor="let t of testimonials" class="card">
+      <app-icon name="quote" klass="h-7 w-7 text-brass-400"></app-icon>
+      <p class="mt-4 text-sm leading-relaxed text-slate-600">&ldquo;{{ t.text }}&rdquo;</p>
+      <div class="mt-5 flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 font-display font-bold text-brand-700">
+          {{ t.name.charAt(0) }}
+        </div>
+        <div>
+          <p class="text-sm font-bold text-brand-900">{{ t.name }}</p>
+          <p class="text-xs text-slate-400">{{ t.role }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="bg-brand-950 py-20">
+  <div class="mx-auto max-w-3xl px-6 text-center">
+    <h2 class="font-display text-3xl font-bold text-white md:text-4xl">Ready to fit out your next project?</h2>
+    <p class="mt-4 text-white/70">Reach out for catalogs, dealer pricing, or bulk order enquiries &mdash; our team responds within one business day.</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a routerLink="/contact" class="btn-primary">Request a Callback</a>
+      <a routerLink="/products" class="btn-outline">Browse Catalog</a>
+    </div>
+  </div>
+</section>
